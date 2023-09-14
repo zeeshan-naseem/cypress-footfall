@@ -1,9 +1,9 @@
 export class TestData
 {
     //url and login information
-    url = 'https://11331.dev.technetgrp.com/login'
-    username = 'footfall5@yopmail.com'
-    password = 'Test.1234' 
+    URL = 'https://11331.dev.technetgrp.com/login'
+    USERNAME = 'footfall5@yopmail.com'
+    PASSWORD = 'Test.1234' 
 
 
     //Test data of adding camera

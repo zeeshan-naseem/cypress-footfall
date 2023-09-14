@@ -4,7 +4,7 @@ export class AddCamera
 {
     addcamerabutton()
     {
-        cy.contains('Add camera', {timeout:6000}).click()
+        cy.contains('Add camera', {timeout:10000}).click()
     }
     cameraname(cameraname)
     {

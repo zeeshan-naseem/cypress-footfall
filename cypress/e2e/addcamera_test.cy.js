@@ -9,9 +9,9 @@ let add_cam = new AddCamera()
 
 // Add Camera
 it('Add Camera', function(){
-  loginPage.navigate(test_data.url)
-  loginPage.enterUsername(test_data.username)
-  loginPage.enterPassword(test_data.password)
+  loginPage.navigate(test_data.URL)
+  loginPage.enterUsername(test_data.USERNAME)
+  loginPage.enterPassword(test_data.PASSWORD)
   loginPage.clickLogin()
   cy.wait(6000)
   add_cam.addcamerabutton()
