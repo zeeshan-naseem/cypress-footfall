@@ -1,4 +1,9 @@
 export class LoginPage{
+
+    username_locator = ':nth-child(2) > .block'
+    password_locator = '.input-container > .block'
+    loginbutton_locator = '.align-bottom'
+
     navigate(url)
     {
         cy.visit(url)
@@ -6,14 +11,14 @@ export class LoginPage{
 
     enterUsername(name)
     {
-        cy.get(':nth-child(2) > .block').type(name)
+        cy.get(this.username_locator).type(name)
     }
     enterPassword(password)
     {
-        cy.get('.input-container > .block').type(password)
+        cy.get(this.password_locator).type(password)
     }
     clickLogin()
     {
-        cy.get('.align-bottom').click()
+        cy.get(this.loginbutton_locator).click()
     }
 }
