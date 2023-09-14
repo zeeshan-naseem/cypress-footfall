@@ -1,16 +1,16 @@
 export class LoginPage{
-    navigate()
+    navigate(url)
     {
-        cy.visit('https://11331.dev.technetgrp.com/login')
+        cy.visit(url)
     }
 
-    enterUsername()
+    enterUsername(name)
     {
-        cy.get(':nth-child(2) > .block').type('footfall5@yopmail.com')
+        cy.get(':nth-child(2) > .block').type(name)
     }
-    enterPassword()
+    enterPassword(password)
     {
-        cy.get('.input-container > .block').type('Test.1234')
+        cy.get('.input-container > .block').type(password)
     }
     clickLogin()
     {
