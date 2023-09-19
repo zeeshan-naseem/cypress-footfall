@@ -8,6 +8,9 @@ export class HourlyReports
     menuicon_locator = '.p-1'
     date_locator = '.react-datepicker__input-container > .lock'
     searchbutton_locator = '.ml-8'
+    starttime_locator = ':nth-child(3) > .rc-time-picker > .rc-time-picker-input'
+    endtime_locator = ':nth-child(4) > .rc-time-picker > .rc-time-picker-input'
+    camerafield_locator = '.camera-box > .m-2'
 
 
 
@@ -23,16 +26,31 @@ export class HourlyReports
     {
         cy.get(this.hourlyreport_locator).click()
     }
+    clickcamerafield()
+    {
+        cy.get(this.camerafield_locator).click()
+        cy.get('#react-select-2-option-3').click()
+    }
     clickdatefield()
     {
         const twoDaysAgo = moment().subtract(2, 'days').format('DD');
         // Open the date picker and select the calculated date
         cy.get(this.date_locator).click();
-        cy.wait(2000)
         cy.get( `.react-datepicker__day--0${twoDaysAgo}`).click()
+    }
+    clickstarttime()
+    {
+        cy.get(this.starttime_locator).click()
+        cy.get('ul > :nth-child(17)').click()
+    }
+    clickendtime()
+    {
+        cy.get(this.endtime_locator).click()
+        cy.get('ul > :nth-child(20)').click()
     }
     clicksearchbutton()
     {
         cy.get(this.searchbutton_locator).click()
     }
+    
 }
