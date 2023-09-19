@@ -8,7 +8,6 @@ export class LoginPage{
     {
         cy.visit(url)
     }
-
     enterUsername(name)
     {
         cy.get(this.username_locator).type(name)
