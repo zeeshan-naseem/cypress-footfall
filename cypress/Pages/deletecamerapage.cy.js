@@ -8,12 +8,14 @@ export class DeleteCamera
     {
         cy.get(this.pagenumbertwo_locator).click()
     }
+   
     deleteicon()
     {
-        cy.get(this.deleteicon_locator).click()
+        cy.get(this.deleteicon_locator).click()      
     }
     deletebutton()
     {
         cy.get(this.deletebutton_locator).click()
     }
+    
 }

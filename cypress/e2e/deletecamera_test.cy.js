@@ -6,7 +6,7 @@ let loginpage = new LoginPage()
 let del_cam = new DeleteCamera()
 let test_data = new TestData
 
-it('Delete Camera', function(){
+it('Delete Camera Test Case', function(){
     loginpage.navigate(test_data.URL)
     loginpage.enterUsername(test_data.USERNAME)
     loginpage.enterPassword(test_data.PASSWORD)

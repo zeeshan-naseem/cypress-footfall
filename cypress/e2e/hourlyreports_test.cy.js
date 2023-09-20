@@ -6,7 +6,7 @@ let loginPage = new LoginPage()
 let test_data = new TestData()
 let hrreport = new HourlyReports()
 
-it('Hourly Report', function(){
+it('Hourly Reports Test Case', function(){
     loginPage.navigate(test_data.URL)
     loginPage.enterUsername(test_data.USERNAME)
     loginPage.enterPassword(test_data.PASSWORD)

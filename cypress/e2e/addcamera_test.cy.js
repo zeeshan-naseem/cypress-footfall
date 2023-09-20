@@ -8,7 +8,7 @@ let add_cam = new AddCamera()
 
 
 // Add Camera
-it('Add Camera', function(){
+it('Add Camera Test Case', function(){
   loginPage.navigate(test_data.URL)
   loginPage.enterUsername(test_data.USERNAME)
   loginPage.enterPassword(test_data.PASSWORD)
