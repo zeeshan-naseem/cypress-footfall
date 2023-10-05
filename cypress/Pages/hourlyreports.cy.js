@@ -16,6 +16,7 @@ export class HourlyReports
 
     clickmenuicon()
     {
+
         cy.get(this.menuicon_locator).click()
     }
     clickReport()
@@ -33,10 +34,11 @@ export class HourlyReports
     }
     clickdatefield()
     {
-        const twoDaysAgo = moment().subtract(2, 'days').format('DD');
-        // Open the date picker and select the calculated date
+        const twoDaysAgo = moment().subtract(2, 'days').format('DD')
+        // Open the date picker and select the calculated two day ago date
         cy.get(this.date_locator).click();
-        cy.get( `.react-datepicker__day--0${twoDaysAgo}`).click()
+        cy.get(`.react-datepicker__day--0${twoDaysAgo}`).first().click()
+
     }
     clickstarttime()
     {
