@@ -32,10 +32,11 @@ export class HourlyReports
         cy.get(this.camerafield_locator).click()
         cy.get('#react-select-2-option-3').click()
     }
+    //function to select two days before date
     clickdatefield()
     {
-        const twoDaysAgo = moment().subtract(2, 'days').format('DD')
         // Open the date picker and select the calculated two day ago date
+        const twoDaysAgo = moment().subtract(2, 'days').format('DD')
         cy.get(this.date_locator).click();
         cy.get(`.react-datepicker__day--0${twoDaysAgo}`).first().click()
 
